@@ -6,9 +6,9 @@
 /* Elements */
 @import './base/html.css';
 @import '../todo-app/todo-app-element.css';
-@import '../todo-list/todo-list-element.css';
-@import '../todo-item/todo-item-element.css';
 @import '../todo-filter/todo-filter-element.css';
+@import '../todo-item/todo-item-element.css';
+@import '../todo-list/todo-list-element.css';
 
 /* Generics */
 @import './generic/card.css';

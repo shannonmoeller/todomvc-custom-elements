@@ -14,7 +14,6 @@ export const todoFilters = {
 	incomplete: (todos) => todos.filter((x) => !x.completed),
 };
 
-
 export function createTodoStore(state) {
 	return createStore(state)
 		.addActions(todoActions)

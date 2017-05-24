@@ -1,6 +1,7 @@
 import gulp from 'gulp';
 import babel from 'gulp-babel';
 import bro from 'gulp-bro';
+import sourcemaps from 'gulp-sourcemaps';
 import uglify from 'gulp-uglify';
 
 export async function scriptsClient() {
@@ -19,14 +20,16 @@ export async function scriptsClient() {
 	};
 
 	const browserifyConfig = {
+		debug: true,
 		transform: [['babelify', babelConfig]],
 	};
 
 	return gulp
-		.src('./src/clien*/scripts/*.js', {
-			sourcemaps: true,
-		})
+		.src('./src/clien*/scripts/*.js')
 		.pipe(bro(browserifyConfig))
+		.pipe(sourcemaps.init({
+			loadMaps: true,
+		}))
 		.pipe(uglify())
 		.pipe(gulp.dest('dist', {
 			sourcemaps: '.',

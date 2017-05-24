@@ -2,7 +2,7 @@
   "name": "agro",
   "private": true,
   "scripts": {
-    "build": "gulp",
+    "make": "gulp",
     "test": "nyc gulp test"
   },
   "dependencies": {

@@ -7,7 +7,7 @@ export default (vm) => stripIndents(html`
 
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>$${vm.title}</title>
+		<title>$${vm.title} • TodoMVC</title>
 
 		${vm.styles.map((href) => html`
 			<link rel="stylesheet" href="${href}" />

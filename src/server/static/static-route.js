@@ -1,6 +1,5 @@
-import { Router } from 'express';
+import { Router, static as serve } from 'express';
 import { resolve } from 'path';
-import serve from 'serve-static';
 
 export function getStatic(path) {
 	return serve(resolve(__dirname, path), {

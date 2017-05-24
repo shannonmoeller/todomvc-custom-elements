@@ -14,7 +14,7 @@ export function start() {
 				'dist/shared',
 			],
 		});
-	}, 1000);
+	}, 3000);
 }
 
 gulp.task('start', gulp.series(

@@ -3,6 +3,7 @@ WORKDIR /src
 
 COPY package.json .
 RUN npm install
-
 COPY . .
-CMD npm run build && node bin/www
+
+ENV NODE_ENV production
+CMD npm run make && node bin/www

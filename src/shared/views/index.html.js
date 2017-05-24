@@ -3,7 +3,7 @@ import renderLayout from './layouts/main.html';
 import renderTodoApp from './partials/todo-app.html';
 
 export default (vm) => renderLayout({
-	title: 'Custom Elements • TodoMVC',
+	title: 'Custom Elements',
 	scripts: ['/scripts/index.js'],
 	styles: ['/styles/index.css'],
 	body: html`
