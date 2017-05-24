@@ -1,0 +1,35 @@
+.card {
+	position: relative;
+	background: var(--todo-color-white);
+	box-shadow:
+		0 0.2rem 0.4rem 0 color(var(--todo-color-black) a(0.2)),
+		0 2.5rem 5rem 0 color(var(--todo-color-black) a(0.1));
+}
+
+.card__ft {
+	padding: 1.1rem 1.5rem;
+	border-top: 0.1rem solid var(--todo-color-border);
+	color: hsla(0, 0%, 47%, 1);
+	text-align: center;
+}
+
+.card__ft:before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 5rem;
+	overflow: hidden;
+	box-shadow:
+		0 0.1rem 0.1rem hsla(0, 0%, 0%, 0.2),
+		0 0.8rem 0 -0.3rem hsla(0, 0%, 96%, 1),
+		0 0.9rem 0.1rem -0.3rem hsla(0, 0%, 0%, 0.2),
+		0 1.6rem 0 -0.6rem hsla(0, 0%, 96%, 1),
+		0 1.7rem 0.2rem -0.6rem hsla(0, 0%, 0%, 0.2);
+}
+
+.card__ft > * {
+	position: relative;
+	z-index: 1;
+}

@@ -1,0 +1,18 @@
+.spread {
+	display: flex;
+}
+
+.spread > * {
+	flex: 1 1 auto;
+	text-align: center;
+}
+
+.spread > *:first-child {
+	flex: 0 0 20%;
+	text-align: left;
+}
+
+.spread > *:last-child {
+	flex: 0 0 20%;
+	text-align: right;
+}

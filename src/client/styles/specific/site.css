@@ -1,0 +1,22 @@
+.site {
+	margin: 0 auto;
+	min-width: 23rem;
+	max-width: 55rem;
+}
+
+.site__ft {
+	margin: 6.5rem auto 0;
+	color: hsla(0, 0%, 75%, 1);
+	font-size: 1rem;
+	line-height: 1;
+	text-shadow: 0 0.1rem 0 color(var(--todo-color-white) a(0.5));
+	text-align: center;
+}
+
+.site__ft p {
+	margin: 1em 0;
+}
+
+.site__ft a {
+	font-weight: 400;
+}

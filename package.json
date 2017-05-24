@@ -1,0 +1,56 @@
+{
+  "name": "agro",
+  "private": true,
+  "scripts": {
+    "build": "gulp",
+    "test": "nyc gulp test"
+  },
+  "dependencies": {
+    "@webcomponents/custom-elements": "^1.0.0",
+    "babel-runtime": "^6.23.0",
+    "common-tags": "^1.4.0",
+    "compression": "^1.6.2",
+    "dom4": "^1.8.3",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.3",
+    "helmet": "^3.6.1",
+    "morphdom": "^2.3.2",
+    "reset-css": "^2.2.0",
+    "tcomb": "^3.2.20"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.5.1",
+    "babel-register": "^6.24.1",
+    "babelify": "^7.3.0",
+    "blue-tape": "^1.0.0",
+    "cssnano": "^3.10.0",
+    "del": "^2.2.2",
+    "eslint": "^3.19.0",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-babel": "^6.1.2",
+    "gulp-bro": "^1.0.2",
+    "gulp-eslint": "^3.0.1",
+    "gulp-postcss": "^7.0.0",
+    "gulp-stylelint": "^3.9.0",
+    "gulp-tape": "0.0.9",
+    "gulp-uglify": "^3.0.0",
+    "nodemon": "^1.11.0",
+    "nyc": "^10.3.2",
+    "postcss-cssnext": "^2.11.0",
+    "postcss-import": "^10.0.0",
+    "require-dir": "^0.3.1",
+    "stylelint": "^7.10.1",
+    "stylelint-config-standard": "^16.0.0",
+    "tap-diff": "^0.1.1"
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.js"
+    ],
+    "reporter": [
+      "lcov",
+      "text"
+    ]
+  }
+}

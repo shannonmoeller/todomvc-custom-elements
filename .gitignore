@@ -1,0 +1,11 @@
+.nyc_output/
+.vagrant/
+.vscode/
+coverage/
+dist/
+node_modules/
+
+.DS_Store
+.Trash*
+*.log
+*.swp

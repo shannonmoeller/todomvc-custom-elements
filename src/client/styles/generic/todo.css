@@ -1,0 +1,30 @@
+.todo {
+	display: flex;
+	align-items: center;
+	position: relative;
+	border-top: 0.1rem solid var(--todo-color-border);
+}
+
+.todo + .todo {
+	border-top: 0.1rem solid var(--todo-color-separator);
+}
+
+.todo > * {
+	flex-shrink: 0;
+}
+
+.todo__bd {
+	flex: 1 1 auto;
+	padding: 1.5rem 1.5rem 1.5rem 2rem;
+	font-size: 2.4rem;
+	line-height: 1.2;
+	transition: color 0.4s;
+	word-wrap: break-word;
+	/* Fix word wrapping. */
+	min-width: 1%;
+}
+
+.todo__bd--completed {
+	color: #d9d9d9;
+	text-decoration: line-through;
+}

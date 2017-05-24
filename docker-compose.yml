@@ -1,0 +1,17 @@
+version: '2.1'
+
+services:
+  node:
+    build: .
+    volumes:
+      - .:/src
+      - node_modules:/src/node_modules
+    ports:
+      - '8080:8080'
+    environment:
+      - NODE_ENV=development
+    command: >
+      npm run build start
+
+volumes:
+  node_modules:

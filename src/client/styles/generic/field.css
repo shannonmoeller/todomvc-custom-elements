@@ -1,0 +1,56 @@
+.field {
+	position: relative;
+	margin: 0;
+	padding: 0.6rem;
+	width: 100%;
+	border: 0.1rem solid hsla(0, 0%, 60%, 1);
+	box-shadow: inset 0 -0.1rem 0.5rem 0 hsla(0, 0%, 0%, 0.2);
+	box-sizing: border-box;
+	color: inherit;
+	font-size: 2.4rem;
+	font-family: inherit;
+	font-weight: inherit;
+	line-height: 1.4em;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.field::-webkit-input-placeholder {
+	font-style: italic;
+	font-weight: 300;
+	color: #e6e6e6;
+}
+
+.field::-moz-placeholder {
+	font-style: italic;
+	font-weight: 300;
+	color: #e6e6e6;
+}
+
+.field::input-placeholder {
+	font-style: italic;
+	font-weight: 300;
+	color: #e6e6e6;
+}
+
+.field--new {
+	padding: 1.6rem 1.6rem 1.6rem 6rem;
+	background: hsla(0, 0%, 0%, 0.003);
+	border: none;
+	box-shadow: inset 0 -0.2rem 0.1rem hsla(0, 0%, 0%, 0.03);
+}
+
+.field--edit {
+	display: none;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 1;
+	padding: 1.6rem 5.9rem;
+}
+
+.editing .field--edit {
+	display: block;
+}

@@ -1,0 +1,4 @@
+.link:focus,
+.link:hover {
+	text-decoration: underline;
+}

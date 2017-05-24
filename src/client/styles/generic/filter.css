@@ -1,0 +1,19 @@
+.filter {
+	color: inherit;
+	margin: 0.3rem;
+	padding: 0.3rem 0.7rem;
+	text-decoration: none;
+	border: 0.1rem solid transparent;
+	border-radius: 0.3rem;
+}
+
+.filter:focus,
+.filter:hover {
+	border-color: rgba(175, 47, 47, 0.1);
+}
+
+.filter--selected,
+.filter--selected:focus,
+.filter--selected:hover {
+	border-color: rgba(175, 47, 47, 0.2);
+}

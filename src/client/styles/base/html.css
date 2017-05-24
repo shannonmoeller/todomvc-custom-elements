@@ -1,0 +1,36 @@
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background: var(--todo-color-background);
+	color: var(--todo-color-foreground);
+	font: var(--todo-font);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a,
+button {
+	cursor: pointer;
+	color: inherit;
+	text-decoration: none;
+}
+
+button {
+	appearance: none;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: none;
+	border: 0;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+:focus {
+	outline: 0;
+}

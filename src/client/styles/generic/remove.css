@@ -1,0 +1,24 @@
+.remove {
+	opacity: 0.01;
+	margin-bottom: 0.6rem;
+	height: 4rem;
+	width: 5rem;
+	color: hsla(0, 33%, 70%, 1);
+	font-size: 3rem;
+	text-align: center;
+	transition: color 0.2s ease-out;
+}
+
+.remove:focus,
+.remove:hover {
+	opacity: 1;
+	color: #af5b5e;
+}
+
+.remove:after {
+	content: '×';
+}
+
+*:hover > .remove {
+	opacity: 1;
+}

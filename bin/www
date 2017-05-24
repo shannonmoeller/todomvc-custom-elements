@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+require('dotenv').config();
+
+const { createServer } = require('../dist/server/index');
+const hostname = process.env.SERVER_HOST;
+const port = Number(process.env.SERVER_PORT);
+
+createServer().listen(port, hostname, () => console.log(`
+	Serving: http://${hostname}:${port}
+`));
