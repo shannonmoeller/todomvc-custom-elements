@@ -1,5 +1,5 @@
 {
-  "name": "agro",
+  "name": "todomvc-custom-elements",
   "private": true,
   "scripts": {
     "make": "gulp",
