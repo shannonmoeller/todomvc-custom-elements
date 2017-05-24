@@ -15,13 +15,20 @@ export async function scriptsClient() {
 	};
 
 	const babelConfig = {
-		plugins: ['transform-runtime'],
-		presets: [['env', envConfig]],
+		plugins: [
+			'transform-object-rest-spread',
+			'transform-runtime',
+		],
+		presets: [
+			['env', envConfig],
+		],
 	};
 
 	const browserifyConfig = {
 		debug: true,
-		transform: [['babelify', babelConfig]],
+		transform: [
+			['babelify', babelConfig],
+		],
 	};
 
 	return gulp
@@ -44,7 +51,13 @@ export async function scriptsServer() {
 	};
 
 	const babelConfig = {
-		presets: [['env', envConfig]],
+		plugins: [
+			'transform-object-rest-spread',
+			'transform-runtime',
+		],
+		presets: [
+			['env', envConfig]
+		],
 	};
 
 	return gulp

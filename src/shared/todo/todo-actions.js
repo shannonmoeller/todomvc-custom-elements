@@ -1,4 +1,4 @@
-import { Num, Str } from 'tcomb';
+import { Bool, Num, Str } from 'tcomb';
 import { TodoApp, TodoFilter } from './todo-types';
 
 const defaultState = {
@@ -12,7 +12,11 @@ export function initTodos(state, initialState) {
 		TodoApp(initialState);
 	}
 
-	return Object.assign({}, defaultState, state, initialState);
+	return {
+		...defaultState,
+		...state,
+		...initialState,
+	};
 }
 
 export function addTodo(state, title) {
@@ -24,14 +28,16 @@ export function addTodo(state, title) {
 		return state;
 	}
 
-	return Object.assign({}, state, {
+	return {
+		...state,
+
 		todoIndex: state.todoIndex + 1,
 		todos: state.todos.concat({
 			id: state.todoIndex,
 			title: trimmedTitle,
 			completed: false,
 		}),
-	});
+	};
 }
 
 export function editTodo(state, id, title) {
@@ -44,61 +50,85 @@ export function editTodo(state, id, title) {
 		return state;
 	}
 
-	return Object.assign({}, state, {
+	return {
+		...state,
+
 		todos: state.todos.map((item) => {
 			if (item.id !== id) {
 				return item;
 			}
 
-			return Object.assign({}, item, {
+			return {
+				...item,
+
 				title: trimmedTitle,
-			});
+			};
 		}),
-	});
+	};
 }
 
 export function toggleTodo(state, id) {
 	Num(id);
 
-	return Object.assign({}, state, {
+	return {
+		...state,
+
 		todos: state.todos.map((item) => {
 			if (item.id !== id) {
 				return item;
 			}
 
-			return Object.assign({}, item, {
+			return {
+				...item,
+
 				completed: !item.completed,
-			});
+			};
 		}),
-	});
+	};
 }
 
 export function toggleAllTodos(state, completed) {
-	return Object.assign({}, state, {
-		todos: state.todos.map((item) => Object.assign({}, item, {
+	Bool(completed);
+
+	return {
+		...state,
+
+		todos: state.todos.map((item) => ({
+			...item,
+
 			completed,
 		})),
-	});
+	};
 }
 
 export function removeTodo(state, id) {
 	Num(id);
 
-	return Object.assign({}, state, {
-		todos: state.todos.filter((item) => item.id !== id),
-	});
+	return {
+		...state,
+
+		todos: state.todos.filter((item) =>
+			item.id !== id
+		),
+	};
 }
 
 export function removeCompletedTodos(state) {
-	return Object.assign({}, state, {
-		todos: state.todos.filter((item) => !item.completed),
-	});
+	return {
+		...state,
+
+		todos: state.todos.filter((item) =>
+			!item.completed
+		),
+	};
 }
 
 export function setTodoFilter(state, todoFilter) {
 	TodoFilter(todoFilter);
 
-	return Object.assign({}, state, {
+	return {
+		...state,
+
 		todoFilter,
-	});
+	};
 }

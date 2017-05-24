@@ -3,7 +3,10 @@ require('dotenv').config();
 
 // Transpile on the fly.
 require('babel-register')({
-	plugins: ['transform-runtime'],
+	plugins: [
+		'transform-object-rest-spread',
+		'transform-runtime',
+	],
 	presets: ['env'],
 });
 
