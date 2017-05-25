@@ -66,10 +66,10 @@ export async function scriptsServer() {
 		.pipe(gulp.dest('dist'));
 }
 
-export const scripts = gulp.parallel([
+export const scripts = gulp.parallel(
 	scriptsClient,
 	scriptsServer,
-]);
+);
 
 gulp.task('scripts', async () => {
 	if (process.env.NODE_ENV === 'development') {

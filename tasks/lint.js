@@ -21,10 +21,10 @@ export async function lintStyles() {
 		}));
 }
 
-export const lint = gulp.parallel([
+export const lint = gulp.parallel(
 	lintScripts,
 	lintStyles,
-]);
+);
 
 gulp.task('lint', async () => {
 	if (process.env.NODE_ENV === 'development') {

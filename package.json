@@ -2,9 +2,16 @@
   "name": "todomvc-custom-elements",
   "private": true,
   "scripts": {
+    "deploy": "NODE_ENV=production gulp && now --npm --public",
+    "start": "node bin/www",
     "make": "gulp",
     "test": "nyc gulp test"
   },
+  "files": [
+    ".env",
+    "bin",
+    "dist"
+  ],
   "dependencies": {
     "@webcomponents/custom-elements": "^1.0.0",
     "babel-runtime": "^6.23.0",
@@ -37,6 +44,7 @@
     "gulp-tape": "0.0.9",
     "gulp-uglify": "^3.0.0",
     "nodemon": "^1.11.0",
+    "now": "^6.1.1",
     "nyc": "^10.3.2",
     "postcss-cssnext": "^2.11.0",
     "postcss-import": "^10.0.0",
@@ -53,5 +61,8 @@
       "lcov",
       "text"
     ]
+  },
+  "engines": {
+    "node": "^6.10.0"
   }
 }
