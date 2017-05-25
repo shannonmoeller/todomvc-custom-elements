@@ -10,7 +10,11 @@ export function getTodo(request, response) {
 		],
 	});
 
-	response.send(todoTemplates.renderIndex(state));
+	response.send(
+		todoTemplates.renderIndex(
+			state
+		)
+	);
 }
 
 export function routeTodo() {

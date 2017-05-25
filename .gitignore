@@ -1,5 +1,4 @@
 .nyc_output/
-.vagrant/
 .vscode/
 coverage/
 dist/
