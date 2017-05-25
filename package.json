@@ -2,10 +2,11 @@
   "name": "todomvc-custom-elements",
   "private": true,
   "scripts": {
-    "deploy": "NODE_ENV=production gulp && now --npm --public",
-    "start": "node bin/www",
-    "make": "gulp",
-    "test": "nyc gulp test"
+    "deploy": "npm run prod && now --npm --public -e NODE_ENV=production",
+    "start": "NODE_ENV=production node bin/www",
+    "dev": "NODE_ENV=development gulp",
+    "prod": "NODE_ENV=production gulp",
+    "test": "NODE_ENV=test nyc gulp test"
   },
   "files": [
     ".env",

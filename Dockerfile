@@ -6,4 +6,4 @@ RUN npm install
 COPY . .
 
 ENV NODE_ENV production
-CMD npm run make && node bin/www
+CMD npm run prod && npm run start
