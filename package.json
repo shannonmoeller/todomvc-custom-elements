@@ -2,7 +2,7 @@
   "name": "todomvc-custom-elements",
   "private": true,
   "scripts": {
-    "deploy": "npm run prod && now --npm --public -e NODE_ENV=production",
+    "deploy": "npm run prod && now --public && now alias",
     "start": "NODE_ENV=production node bin/www",
     "dev": "NODE_ENV=development gulp",
     "prod": "NODE_ENV=production gulp",
@@ -52,6 +52,13 @@
     "stylelint": "^7.10.1",
     "stylelint-config-standard": "^16.0.0",
     "tap-diff": "^0.1.1"
+  },
+  "now": {
+    "alias": "todomvc-custom-elements",
+    "type": "npm",
+    "env": {
+      "NODE_ENV": "production"
+    }
   },
   "nyc": {
     "include": [
