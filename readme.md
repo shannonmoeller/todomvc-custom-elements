@@ -36,7 +36,7 @@ This topic has been beaten to death [elsewhere](https://www.google.com/search?q=
 
 > But, separation of concerns is different from separation of technologies.
 
-I agree in principle! But, it just so happens that in the browser we _have_ separate technologies for separate concerns. Yay, browser! HTML defines what things are. CSS defines how things look. JS defines how things work. There may be overlap, but at the end of the day I don't want to fork a whole component or bloat its interface because I need to change a heading font in one particular use case (I wish that was a hypothetical example).
+I agree! But, it just so happens that in the browser we _have_ separate technologies for separate concerns. Yay, browser! HTML defines what things are. CSS defines how things look. JS defines how things work. There may be overlap, but at the end of the day I don't want to fork a whole component or bloat its interface because I need to change a heading font in one particular use case (I wish that was a hypothetical example).
 
 ----
 
