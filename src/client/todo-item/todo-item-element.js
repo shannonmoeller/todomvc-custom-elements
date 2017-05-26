@@ -25,10 +25,15 @@ export class TodoItemElement extends TodoElement {
 	 * @callback
 	 */
 	onEditStart(event, el) {
-		const parent = this.parentElement;
-		const field = el.parentElement.querySelector('input[type="text"]');
+		const field = this.parentElement.querySelector('input[type="text"]');
 
-		parent.classList.add('editing');
+		if (!field) {
+			return;
+		}
+
+		event.preventDefault();
+
+		this.parentElement.classList.add('editing');
 		field.focus();
 
 		setTimeout(() => {

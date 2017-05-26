@@ -1,5 +1,6 @@
 import { TodoElement } from '../todo-element/todo-element';
 import { createTodoStore, todoTemplates } from '../../shared/todo/todo-service';
+import { debounce } from '../../shared/util/util-function-service';
 
 /**
  * @class TodoAppElement
@@ -31,11 +32,10 @@ export class TodoAppElement extends TodoElement {
 
 		const state = JSON.parse(this.getAttribute('state'));
 		const store = createTodoStore(state);
+		const render = debounce(() => this.render());
 
 		this.store = store;
-		this.removeStoreListener = store.addListener(() => {
-			this.render();
-		});
+		this.removeStoreListener = store.addListener(render);
 
 		return this;
 	}

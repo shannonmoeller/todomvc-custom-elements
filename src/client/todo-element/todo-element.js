@@ -84,9 +84,7 @@ export class TodoElement extends HTMLElement {
 	 * @return {TodoElement}
 	 */
 	patch(html) {
-		morphdom(this, String(html).trim(), {
-			childrenOnly: true,
-		});
+		morphdom(this, String(html).trim());
 
 		return this;
 	}
