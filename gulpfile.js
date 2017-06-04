@@ -2,13 +2,7 @@
 require('dotenv').config();
 
 // Transpile on the fly.
-require('babel-register')({
-	plugins: [
-		'transform-object-rest-spread',
-		'transform-runtime',
-	],
-	presets: ['env'],
-});
+require('babel-register');
 
 // Load tasks.
 require('require-dir')('./tasks');

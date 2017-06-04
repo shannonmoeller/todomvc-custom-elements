@@ -5,35 +5,21 @@ import sourcemaps from 'gulp-sourcemaps';
 import uglify from 'gulp-uglify';
 
 export async function scriptsClient() {
-	const envConfig = {
-		targets: {
-			browsers: [
-				'last 2 versions',
-				'> 1%',
-			],
-		},
-	};
-
-	const babelConfig = {
-		plugins: [
-			'transform-object-rest-spread',
-			'transform-runtime',
-		],
-		presets: [
-			['env', envConfig],
-		],
-	};
-
-	const browserifyConfig = {
-		debug: true,
-		transform: [
-			['babelify', babelConfig],
-		],
-	};
-
 	return gulp
 		.src('./src/clien*/scripts/*.js')
-		.pipe(bro(browserifyConfig))
+		.pipe(bro({
+			debug: true,
+			transform: [['babelify', {
+				presets: [['env', {
+					targets: {
+						browsers: [
+							'last 2 versions',
+							'> 1%',
+						],
+					},
+				}]],
+			}]],
+		}))
 		.pipe(sourcemaps.init({
 			loadMaps: true,
 		}))
@@ -44,25 +30,9 @@ export async function scriptsClient() {
 }
 
 export async function scriptsServer() {
-	const envConfig = {
-		targets: {
-			node: 6,
-		},
-	};
-
-	const babelConfig = {
-		plugins: [
-			'transform-object-rest-spread',
-			'transform-runtime',
-		],
-		presets: [
-			['env', envConfig]
-		],
-	};
-
 	return gulp
 		.src('./src/{server,shared}/**/*.js')
-		.pipe(babel(babelConfig))
+		.pipe(babel())
 		.pipe(gulp.dest('dist'));
 }
 

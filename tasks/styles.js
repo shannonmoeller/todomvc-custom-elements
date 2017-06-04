@@ -5,25 +5,16 @@ import cssNext from 'postcss-cssnext';
 import postcss from 'gulp-postcss';
 
 export async function styles() {
-	const nextConfig = {
-		browsers: [
-			'last 2 versions',
-			'> 1%',
-		],
-	};
-
-	const nanoConfig = {
-		autoprefixer: false,
-	};
-
 	return gulp
 		.src('./src/clien*/styles/*.css', {
 			sourcemaps: true,
 		})
 		.pipe(postcss([
 			cssImport(),
-			cssNext(nextConfig),
-			cssNano(nanoConfig),
+			cssNext(),
+			cssNano({
+				autoprefixer: false,
+			}),
 		]))
 		.pipe(gulp.dest('dist', {
 			sourcemaps: '.',

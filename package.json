@@ -35,6 +35,7 @@
     "cssnano": "^3.10.0",
     "del": "^2.2.2",
     "eslint": "^3.19.0",
+    "eslint-config-whim": "^2.1.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-babel": "^6.1.2",
     "gulp-bro": "^1.0.2",
@@ -50,8 +51,24 @@
     "postcss-import": "^10.0.0",
     "require-dir": "^0.3.1",
     "stylelint": "^7.10.1",
-    "stylelint-config-standard": "^16.0.0",
+    "stylelint-config-whim": "^2.0.0",
     "tap-diff": "^0.1.1"
+  },
+  "babel": {
+    "plugins": [
+      "transform-object-rest-spread",
+      "transform-runtime"
+    ],
+    "presets": [
+      "env"
+    ]
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%"
+  ],
+  "eslintConfig": {
+    "extends": "eslint-config-whim"
   },
   "now": {
     "alias": "todomvc-custom-elements",
@@ -68,6 +85,9 @@
       "lcov",
       "text"
     ]
+  },
+  "stylelint": {
+    "extends": "stylelint-config-whim"
   },
   "engines": {
     "node": "^6.10.0"
