@@ -23,7 +23,11 @@ export async function scriptsClient() {
 		.pipe(sourcemaps.init({
 			loadMaps: true,
 		}))
-		.pipe(uglify())
+		.pipe(uglify({
+			output: {
+				comments: /copyright|li[cs]en[cs]e|preserve/gi,
+			},
+		}))
 		.pipe(gulp.dest('dist', {
 			sourcemaps: '.',
 		}));
