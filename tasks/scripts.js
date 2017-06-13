@@ -3,6 +3,9 @@ import babel from 'gulp-babel';
 import bro from 'gulp-bro';
 import sourcemaps from 'gulp-sourcemaps';
 import uglify from 'gulp-uglify';
+import readPackage from 'read-pkg-up';
+
+const { browserslist } = readPackage.sync('../package.json');
 
 export async function scriptsClient() {
 	return gulp
@@ -12,10 +15,7 @@ export async function scriptsClient() {
 			transform: [['babelify', {
 				presets: [['env', {
 					targets: {
-						browsers: [
-							'last 2 versions',
-							'> 1%',
-						],
+						browsers: browserslist,
 					},
 				}]],
 			}]],

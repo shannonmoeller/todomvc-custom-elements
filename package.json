@@ -49,6 +49,7 @@
     "nyc": "^11.0.2",
     "postcss-cssnext": "^2.11.0",
     "postcss-import": "^10.0.0",
+    "read-pkg-up": "^2.0.0",
     "require-dir": "^0.3.2",
     "stylelint": "^7.11.0",
     "stylelint-config-whim": "^2.0.0",
