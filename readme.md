@@ -28,7 +28,7 @@ Dare to reacquaint yourself.
 
 ### What about Shadow DOM?
 
-Web components are comprised of many separate APIs. You don't need to use them all every time. The [Shadow DOM](https://developers.google.com/web/fundamentals/getting-started/primers/shadowdom) is often a cannon used to kill a mosquito. Scoped CSS is a really great idea when an element is going to be dropped into a hostile environment, but this project is friendlier than that. Additionally, encapsulation can [break the document outline](https://jakearchibald.com/2017/do-we-need-a-new-heading-element/), [complicate accessibility](https://www.youtube.com/watch?v=2UfabypzfGU), and lead to some nasty anti-patterns like [attribute-proxying](https://github.com/PolymerElements/paper-input/blob/master/paper-input.html#L170-L203).
+Web components are comprised of many separate APIs. You don't need to use them all every time. The [Shadow DOM](https://developers.google.com/web/fundamentals/getting-started/primers/shadowdom) is often a cannon used to kill a mosquito. Scoped CSS is a really great idea when an element is going to be dropped into a hostile environment, but this project is friendlier than that. Additionally, encapsulation can [break the document outline](https://jakearchibald.com/2017/do-we-need-a-new-heading-element/), [complicate accessibility](https://www.youtube.com/watch?v=2UfabypzfGU), and lead to some nasty anti-patterns like [attribute-proxying](https://github.com/PolymerElements/paper-input/blob/d56ddcb/paper-input.html#L170-L203).
 
 ### Why isn't every part of a component in the same directory?
 

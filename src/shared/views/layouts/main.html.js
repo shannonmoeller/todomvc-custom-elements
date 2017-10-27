@@ -14,7 +14,7 @@ export default (vm) => stripIndents(html`
 		`)}
 
 		${vm.scripts.map((src) => html`
-			<script src="${src}"></script>
+			<script type="module" src="${src}"></script>
 		`)}
 
 	</head>

@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 require('dotenv').config();
 
-const { createServer } = require('../dist/server/index');
+const esm = require('@std/esm')(module);
+const { createServer } = esm('../src/server/index');
 const hostname = process.env.SERVER_HOST;
 const port = Number(process.env.SERVER_PORT);
 

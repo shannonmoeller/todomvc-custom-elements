@@ -15,7 +15,7 @@
 	color: #af5b5e;
 }
 
-.remove:after {
+.remove::after {
 	content: '×';
 }
 

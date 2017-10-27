@@ -1,4 +1,4 @@
-version: '2.1'
+version: '3.4'
 services:
   node:
     build: .
@@ -9,4 +9,4 @@ services:
       - '8080:8080'
     environment:
       - NODE_ENV=development
-    command: npm run dev start
+    command: npm run start-dev

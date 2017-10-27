@@ -20,6 +20,7 @@
 	line-height: 1.2;
 	transition: color 0.4s;
 	word-wrap: break-word;
+
 	/* Fix word wrapping. */
 	min-width: 1%;
 }

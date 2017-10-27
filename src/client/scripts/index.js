@@ -1,8 +1,3 @@
-import './shim/native-custom-elements';
-import '@webcomponents/custom-elements';
-import 'core-js/fn/string/ends-with';
-import 'dom4';
-
 import { TodoAppElement } from '../todo-app/todo-app-element';
 import { TodoListElement } from '../todo-list/todo-list-element';
 import { TodoItemElement } from '../todo-item/todo-item-element';

@@ -1,4 +1,4 @@
-FROM node:6
+FROM node:8
 WORKDIR /src
 
 COPY package.json .
@@ -6,4 +6,4 @@ RUN npm install
 COPY . .
 
 ENV NODE_ENV production
-CMD npm run prod && npm run start
+CMD npm run start

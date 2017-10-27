@@ -19,21 +19,27 @@ export default (vm) => {
 						class="filter ${todoFilter === 'all' && 'filter--selected'}"
 						href="#"
 						data-filter="all"
-						todo-filter-click="onFilter">All</a>
+						todo-filter-click="onFilter">
+						All
+					</a>
 				</li>
 				<li>
 					<a
 						class="filter ${todoFilter === 'incomplete' && 'filter--selected'}"
 						href="#"
 						data-filter="incomplete"
-						todo-filter-click="onFilter">Active</a>
+						todo-filter-click="onFilter">
+						Active
+					</a>
 				</li>
 				<li>
 					<a
 						class="filter ${todoFilter === 'complete' && 'filter--selected'}"
 						href="#"
 						data-filter="complete"
-						todo-filter-click="onFilter">Completed</a>
+						todo-filter-click="onFilter">
+						Completed
+					</a>
 				</li>
 			</ul>
 
