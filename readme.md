@@ -40,6 +40,4 @@ I agree! But, it just so happens that in the browser we _have_ separate technolo
 
 ----
 
-© Shannon Moeller <me@shannonmoeller.com> (http://shannonmoeller.com)
-
-Licensed under [MIT](http://shannonmoeller.com/mit.txt)
+MIT © [Shannon Moeller](http://shannonmoeller.com)
