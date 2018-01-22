@@ -2,9 +2,9 @@
   "name": "todomvc-custom-elements",
   "private": true,
   "scripts": {
-    "deploy": "npm run prod && now --public && now alias",
+    "deploy": "run-s prod && now --public && now alias",
     "start": "NODE_ENV=production node bin/www",
-    "start-dev": "NODE_ENV=development nodemon bin/www",
+    "start-dev": "NODE_ENV=development nodemon --ignore src/client bin/www",
     "lint": "run-s lint-*",
     "lint-prettier": "prettier --write src/**/*.{js,css}",
     "lint-eslint": "eslint --fix src/**/*.js",
@@ -23,7 +23,8 @@
     "compression": "^1.7.1",
     "dotenv": "^4.0.0",
     "express": "^4.16.2",
-    "helmet": "^3.9.0"
+    "helmet": "^3.9.0",
+    "tcomb": "^3.2.24"
   },
   "devDependencies": {
     "blue-tape": "^1.0.0",
@@ -46,7 +47,10 @@
     "esm": "js"
   },
   "now": {
-    "alias": "todomvc-custom-elements"
+    "alias": "todomvc-custom-elements",
+    "env": {
+      "NODE_ENV": "production"
+    }
   },
   "prettier": {
     "singleQuote": true,

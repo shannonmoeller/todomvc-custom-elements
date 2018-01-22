@@ -1,3 +1,4 @@
+.esm-cache/
 .nyc_output/
 .vscode/
 coverage/

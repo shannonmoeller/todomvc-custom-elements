@@ -1,4 +1,4 @@
-import { html } from '../../template/template-service';
+import { html } from '../../template/template-service.js';
 
 export default (vm) => html`
 	<todo-item class="todo" data-id="$${vm.id}">

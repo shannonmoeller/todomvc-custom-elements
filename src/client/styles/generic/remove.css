@@ -12,7 +12,7 @@
 .remove:focus,
 .remove:hover {
 	opacity: 1;
-	color: #af5b5e;
+	color: hsla(358, 34%, 52%, 1);
 }
 
 .remove::after {

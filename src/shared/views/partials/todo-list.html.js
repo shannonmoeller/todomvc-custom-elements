@@ -1,6 +1,6 @@
-import { html } from '../../template/template-service';
-import { todoFilters } from '../../todo/todo-service';
-import renderTodoItem from './todo-item.html';
+import { html } from '../../template/template-service.js';
+import { todoFilters } from '../../todo/todo-service.js';
+import renderTodoItem from './todo-item.html.js';
 
 export default (vm) => {
 	const { newTodoValue, todoFilter, todos } = vm;
@@ -15,7 +15,8 @@ export default (vm) => {
 				placeholder="What needs to be done?"
 				todo-list-keydown="onNew"
 				value="$${newTodoValue}"
-				autofocus />
+				autofocus
+			/>
 
 			<div ${todos.length === 0 && 'hidden'}>
 				<input
@@ -23,7 +24,8 @@ export default (vm) => {
 					id="todo-list-toggle-all"
 					class="tick tick--all"
 					todo-list-change="onToggleAll"
-					${remainingCount === 0 && 'checked'} />
+					${remainingCount === 0 && 'checked'}
+				/>
 
 				<label for="todo-list-toggle-all">
 					Complete All

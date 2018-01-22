@@ -1,5 +1,7 @@
 import { Router } from 'express';
-import { createTodoStore, todoTemplates } from '../../shared/todo/todo-service';
+
+import { createTodoStore } from '../../shared/todo/todo-store.js';
+import renderIndex from '../../shared/views/index.html.js';
 
 const store = createTodoStore({
 	todoIndex: 2,
@@ -10,11 +12,7 @@ const store = createTodoStore({
 });
 
 export function getTodo(request, response) {
-	response.send(
-		todoTemplates.renderIndex(
-			store.state
-		)
-	);
+	response.send(renderIndex(store.state));
 }
 
 export function routeTodo() {

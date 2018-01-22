@@ -26,6 +26,6 @@
 }
 
 .todo__bd--completed {
-	color: #d9d9d9;
+	color: hsla(0, 0%, 85%, 1);
 	text-decoration: line-through;
 }

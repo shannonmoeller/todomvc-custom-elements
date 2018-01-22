@@ -1,5 +1,5 @@
 import { Bool, Num, Str } from 'tcomb';
-import { TodoApp, TodoFilter } from './todo-types';
+import { TodoApp, TodoFilter } from './todo-types.js';
 
 const defaultState = {
 	todoFilter: 'all',

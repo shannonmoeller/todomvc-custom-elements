@@ -1,4 +1,4 @@
-import { TodoElement } from '../todo-element/todo-element';
+import { TodoElement } from '../todo-element/todo-element.js';
 
 /**
  * @class TodoFilterElement

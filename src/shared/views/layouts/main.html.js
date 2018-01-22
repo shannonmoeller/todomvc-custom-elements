@@ -1,4 +1,4 @@
-import { html, stripIndents } from '../../template/template-service';
+import { html, stripIndents } from '../../template/template-service.js';
 
 export default (vm) => stripIndents(html`
 	<!doctype html>

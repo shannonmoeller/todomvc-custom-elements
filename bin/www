@@ -2,11 +2,11 @@
 require('dotenv').config();
 
 const esm = require('@std/esm')(module);
-const { createServer } = esm('../src/server/index');
-const hostname = process.env.SERVER_HOST;
+const { createServer } = esm('../src/server/index.js');
+const host = process.env.SERVER_HOST;
 const port = Number(process.env.SERVER_PORT);
 
-createServer().listen(port, hostname, () => console.log(`
+createServer().listen(port, host, () => console.log(`
 	Env: ${process.env.NODE_ENV}
-	Serving: http://${hostname}:${port}
+	Serving: http://${host}:${port}
 `));

@@ -19,21 +19,21 @@
 .field::-webkit-input-placeholder {
 	font-style: italic;
 	font-weight: 300;
-	color: #e6e6e6;
+	color: hsla(0, 0%, 90%, 1);
 }
 
 /* stylelint-disable-next-line selector-no-vendor-prefix */
 .field::-moz-placeholder {
 	font-style: italic;
 	font-weight: 300;
-	color: #e6e6e6;
+	color: hsla(0, 0%, 90%, 1);
 }
 
 /* stylelint-disable-next-line selector-pseudo-element-no-unknown */
 .field::input-placeholder {
 	font-style: italic;
 	font-weight: 300;
-	color: #e6e6e6;
+	color: hsla(0, 0%, 90%, 1);
 }
 
 .field--new {

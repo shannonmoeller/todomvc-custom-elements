@@ -1,11 +1,11 @@
-import { html } from '../template/template-service';
-import renderLayout from './layouts/main.html';
-import renderTodoApp from './partials/todo-app.html';
+import { html } from '../template/template-service.js';
+import renderLayout from './layouts/main.html.js';
+import renderTodoApp from './partials/todo-app.html.js';
 
 export default (vm) => renderLayout({
 	title: 'Custom Elements',
-	scripts: ['/scripts/index.js'],
-	styles: ['/styles/index.css'],
+	scripts: ['/client/scripts/index.js'],
+	styles: ['/client/styles/index.css'],
 	body: html`
 		<div class="site">
 			<section class="site__bd">

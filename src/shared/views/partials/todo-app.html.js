@@ -1,6 +1,6 @@
-import { html } from '../../template/template-service';
-import renderTodoFilter from './todo-filter.html';
-import renderTodoList from './todo-list.html';
+import { html } from '../../template/template-service.js';
+import renderTodoFilter from './todo-filter.html.js';
+import renderTodoList from './todo-list.html.js';
 
 export default (vm) => html`
 	<todo-app state="$${JSON.stringify(vm)}">

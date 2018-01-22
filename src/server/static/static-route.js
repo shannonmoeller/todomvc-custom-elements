@@ -3,11 +3,12 @@ import { resolve } from 'path';
 
 export function getStatic(path) {
 	return serve(resolve(__dirname, path), {
-		maxAge: '1d',
+		maxAge: process.env.MAX_AGE,
 	});
 }
 
 export function routeStatic() {
 	return Router()
-		.use(getStatic('../../client'));
+		.use('/client', getStatic('../../client'))
+		.use('/shared', getStatic('../../shared'));
 }

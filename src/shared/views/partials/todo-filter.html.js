@@ -1,5 +1,5 @@
-import { html } from '../../template/template-service';
-import { todoFilters } from '../../todo/todo-service';
+import { html } from '../../template/template-service.js';
+import { todoFilters } from '../../todo/todo-service.js';
 
 export default (vm) => {
 	const { todoFilter, todos } = vm;

@@ -1,6 +1,7 @@
-import { TodoElement } from '../todo-element/todo-element';
-import { createTodoStore, todoTemplates } from '../../shared/todo/todo-service';
-import { debounce } from '../../shared/util/util-function-service';
+import { TodoElement } from '../todo-element/todo-element.js';
+import { createTodoStore } from '../../shared/todo/todo-store.js';
+import { debounce } from '../../shared/util/util-function-service.js';
+import renderTodoApp from '../../shared/views/partials/todo-app.html.js';
 
 /**
  * @class TodoAppElement
